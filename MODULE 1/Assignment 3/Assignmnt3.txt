@@ -1,0 +1,180 @@
+Assignment 3
+Date:06/05/2021
+Submission Date:08/05/2021
+
+
+
+What is Java?
+Java is a general-purpose, class-based, object-oriented programming language designed for having lesser implementation dependencies. It is a computing platform for application development. Java is fast, secure, and reliable, therefore. It is widely used for developing Java applications in laptops, data centers, game consoles, scientific supercomputers, cell phones, etc.
+2. What is a package in Java? List down various advantages of packages.
+A package in Java is used to group related classes. Think of it as a folder in a file directory. We use packages to avoid name conflicts, and to write a better maintainable code. Packages are divided into two categories:
+Built-in Packages (packages from the Java API)
+Advantages
+1) Java package is used to categorize the classes and interfaces so that they can be easily maintained.
+ 2) Java package provides access protection. 
+3) Java package removes naming collision.-defined Packages (create your own packages)
+
+3. Explain JDK, JRE and JVM?
+Java Virtual machine (JVM) is the virtual machine that runs the Java bytecodes. You get this bytecode by compiling the .java files into .class files. .class files contain the bytecodes understood by the JVM.
+
+The Java Runtime Environment (JRE) is a software package which bundles the libraries (jars) and the Java Virtual Machine, and other components to run applications written in the Java. JVM is just a part of JRE distributions.To execute any Java application, you need JRE installed in the machine. It’s the minimum requirement to run Java applications on any computer.
+JDK is a superset of JRE. JDK contains everything that JRE has along with development tools for developing, debugging, and monitoring Java applications. You need JDK when you need to develop Java applications.
+4. Explain public static void main(String args[]) in Java.
+n Java programs, the point from where the program starts its execution or simply the entry point of Java programs is the main() method. Hence, it is one of the most important methods of Java and having proper understanding of it is very important.
+
+Most common syntax of main() method:
+
+
+class GeeksforGeeks {
+    public static void main(String[] args)
+    {
+        System.out.println("I am a Geek");
+    }
+}
+I am a Geek
+Explanation:
+Every word in the public static void main statement has got a meaning to the JVM.
+
+Public: It is an Access modifier, which specifies from where and who can access the method. Making the main() method public makes it globally available. It is made public so that JVM can invoke it from outside the class as it is not present in the current class.
+
+class GeeksforGeeks {
+    private static void main(String[] args)
+    {
+        System.out.println("I am a Geek");
+    }
+}
+Error: Main method not found in class, please define the main method as:
+public static void main(String[] args)
+or a JavaFX application class must extend javafx.application.Application
+Static: It is a keyword which is when associated with a method, makes it a class related method. The main() method is static so that JVM can invoke it without instantiating the class. This also saves the unnecessary wastage of memory which would have been used by the object declared only for calling the main() method by the JVM.
+
+class GeeksforGeeks {
+    public void main(String[] args)
+    {
+        System.out.println("I am a Geek");
+    }
+}
+Error: Main method is not static in class test, please define the main method as:
+public static void main(String[] args)
+Void: It is a keyword and used to specify that a method doesn’t return anything. As main() method doesn’t return anything, its return type is void. As soon as the main() method terminates, the java program terminates too. Hence, it doesn’t make any sense to return from main() method as JVM can’t do anything with the return value of it.
+
+class GeeksforGeeks {
+    public static int main(String[] args)
+    {
+        System.out.println("I am a Geek");
+        return 1;
+    }
+}
+Error: Main method not found in class, please define the main method as:
+public static void main(String[] args)
+or a JavaFX application class must extend javafx.application.Application
+main: It is the name of Java main method. It is the identifier that the JVM looks for as the starting point of the java program. It’s not a keyword.
+
+class GeeksforGeeks {
+    public static void myMain(String[] args)
+    {
+        System.out.println("I am a Geek");
+    }
+}
+Error: Main method not found in class, please define the main method as:
+public static void main(String[] args)
+or a JavaFX application class must extend javafx.application.Application
+String[] args: It stores Java command line arguments and is an array of type java.lang.String class. Here, the name of the String array is args but it is not fixed and user can use any name in place of it.
+
+class GeeksforGeeks {
+    // javac GeeksforGeeks.java
+    // java GeeksforGeeks 1 2 3
+    public static void main(String[] args)
+    {
+        for (String elem : args)
+            System.out.println(elem);
+    }
+}
+1
+2
+3
+Apart from the above mentioned signature of main, you could use public static void main(String args[]) or public static void main(String… args) to call the main function in java. The main method is called if it’s formal parameter matches that of an array of Strings.
+
+Can main method be int? If no, why?
+
+
+
+class GeeksforGeeks {
+      
+    public static int main(String[] args) {
+  
+        System.out.println("GeeksforGeeks");
+    }
+}
+Java does not return int implicitly, even if we declare return type of main as int.
+We will get compile time error
+
+prg1.java:6: error: missing return statement
+}
+^
+1 error
+
+class GeeksforGeeks {
+      
+    public static int main(String[] args) {
+  
+        System.out.println("GeeksforGeeks");
+        return 0;
+    }
+}
+Now, even if we do return 0 or integer explicitly ourselves, from int main.
+We get run time error.
+
+Error: Main method must return a value of type void in class GeeksforGeeks, please
+
+5. What are the differences between C++ and Java?
+C++ uses only compiler, whereas Java uses compiler and interpreter both. C++ supports both operator overloading & method overloading whereas Java only supports method overloading. C++ supports manual object management with the help of new and delete keywords whereas Java has built-in automatic garbage collection.
+
+6. Why Java is platform independent?
+7. What are wrapper classes in Java?
+8. Why pointers are not used in Java?
+9. List some features of Java?
+10.Why is Java Architectural Neutral?
+11.How Java enabled High Performance?
+12.Why Java is considered dynamic?
+13.What is Java Virtual Machine and how it is considered in context of Java’s platform
+independent feature?
+14.List two Java IDE’s?
+15.Why Java is called as “Platform” ?
+16.Is Java Pure-Object oriented Language ?
+17.Which version of java have u learned? Name some of the new features added to it.
+18.What gives Java its 'write once and run anywhere' nature?
+19.Difference between path and classpath.
+20.What is the signature of main function in java ?
+21.What is the difference between JDK and JRE?
+22.What is JVM ? What it does?
+23.Why JVM is called as “virtual machine”?
+24.What are the main components of JVM? Explain them. Or Explain JVM
+Architecture.
+25.What is the difference between Java compiler ( javac ) and JIT ?
+26.Is Empty .java file name a valid source file name?
+27.Is JRE different for different Platforms ?
+28.Difference between C++ and java in terms of object creation.
+29.Who invokes main() function ?
+30.What is .class file known as ?
+31.Can we define more than one public class in a java source code ? what is the rule of
+public class and file name . ?
+32.What is JIT compiler?
+33.How many types of memory areas are allocated by JVM?
+34.What is the rule for local member in java.
+35.What are the various access specifiers in Java?
+36.What is the rule for local member in java.
+37.What is native code?
+38.Why there is no sizeof operator in java ?
+39.What kinds of programs u can develop using Java ?
+40.U have reference type as a member of class. What is the default value it gets?
+41.What is the job done by classloader ?
+42.Explain the hierarchy of classloaders in java.
+43.What is the role played by Bytecode Verifier ?
+44.What are the memory areas allocated by JVM ?
+45.What kinds of programs u can develop using Java
+46.When parseInt() method can be used?
+47.What is finalized() method ?
+48.Difference between C++ pointer and Java reference.
+49.U have reference type as a member of class. What is the default value it gets?
+50.What are the expressions allowed in switch block of java ?
